@@ -1,0 +1,66 @@
+<!-- <form [formGroup]="loginform" (ngSubmit)="loginUser()">
+    <div class="container">
+        <div class="form">
+            <div>name:</div>
+            <input type="text" placeholder="enter name" formControlName="user">
+            <br><span style="color: red;" *ngIf="user && user.invalid && user.touched">user input is not valid</span>
+            <div>password:</div>
+            <input type="text" placeholder="....." formControlName="password">
+            <br><span style="color: red;" *ngIf="password && password.invalid && password.touched">please input maximum
+                5 letters and password is valid</span>
+
+            <div>age:</div>
+            <input type="text" placeholder="enter age" formControlName="age">
+            <br><span style="color: red;" *ngIf="age && age.invalid && age.touched">please input minmun 2 letters and
+                age is valid</span>
+
+            <div>phone-number:</div>
+            <input type="text" placeholder="enter phone-number" formControlName="phone">
+            <br><span style="color: red;" *ngIf="phone && phone.invalid && phone.touched">phone-number input is not
+                valid</span>
+
+
+            <div>email:</div>
+            <input type="email" placeholder="enter email" formControlName="email">
+            <br><span style="color: red;" *ngIf="email && email.invalid && email.touched">email input is not
+                valid</span>
+
+            <div>address:</div>
+            <textarea type="text" placeholder="enter address" formControlName="address"> </textarea>
+
+            <div>Gender:</div>
+            <input type="radio" formControlName="Gender" value="Male">Male
+            <input type="radio" formControlName="Gender" value="Female">Female
+
+
+            <div> <button [disabled]="loginform.invalid">sabmit</button></div>
+
+
+        </div>
+    </div>
+</form>
+{{diagnostic}}
+<app-todos></app-todos>
+ <app-form></app-form> -->
+
+ 
+<header>
+    <nav class="navbar">
+        <ul class="nav nav-tabs ">
+            <li class="nav-item"><a class="nav-link " routerLink="/">Home</a></li>
+            <li class="nav-item"><a class="nav-link " routerLink="/about-us">about-us</a></li>
+            <li class="nav-item"><a class="nav-link " routerLink="/service">service</a></li>
+
+
+        </ul>
+    </nav>
+</header>--> 
+ <router-outlet></router-outlet> 
+
+<app-studentlist></app-studentlist>
+<!-- <app-home></app-home>
+<app-service></app-service>
+<app-about-us></app-about-us> -->
+
+
+

@@ -1,0 +1,41 @@
+<form [formGroup]="loginform" (ngSubmit)="loginUser()" class="form-inline ">
+
+	<div class="container">
+		<h1>School Marksheet</h1><br><br><br>
+		<div class="form-group">
+			<label for="name">Name:</label>
+			<input type="text" class="form-control" formControlName="name" placeholder="enter ypur name">
+		</div>
+		<div class="form-group">
+			<label for="subject">Subject:</label>
+			<input style="margin: 10px;" type="text" class="form-control" formControlName="subject">
+			<!-- <div> -->
+			<span style="color: red;" *ngIf= "subject && subject.invalid && subject.touched" > invalid</span>
+			<!-- </div> -->
+			<label for="mark">Mark:</label>
+			<input style="margin: 10px;" type="text" class="form-control" formControlName="mark">
+			<!-- <div> -->
+			<span style="color: red;" *ngIf= "mark && mark.invalid && mark.touched" > invalid</span>
+			<!-- </div> -->
+		</div>
+
+
+		<div class="form-group" formArrayName="skills">
+			<div *ngFor="let skill of skills.controls ; let i = index">
+				<div [formGroupName]="i"><label for="subject">Subject:</label>
+					<input style="margin: 10px;" type="text" class="form-control" formControlName="sub">
+					<label for="mark">Mark:</label>
+					<input style="margin: 10px;" type="text" class="form-control" formControlName="marks">
+					<button (click)="deleteskills(i)" class="btn btn-danger">remove</button>
+				</div>
+			</div>
+			<button type="button" class="btn btn-primary" (click)="addskill()">add</button>
+
+			<br>
+		</div>
+	</div>
+
+
+	<button style="margin: 10px;" type="submit" class="btn btn-primary ">submit</button><br>
+	{{diagnostic }}
+</form>

@@ -4,7 +4,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppComponent } from './app.component';
 import { TodosComponent } from './mycomponent/todos/todos.component';
 import { ReactiveFormsModule} from '@angular/forms';
-// import { HomeComponent } from './nav/home/home.component';
+import { HomeComponent } from './nav/home/home.component';
 import { ServiceComponent } from './nav/service/service.component';
 import { AboutUsComponent } from './nav/about-us/about-us.component'
 import { RouterModule, Routes } from '@angular/router';
@@ -15,7 +15,7 @@ import { HttpClientModule } from '@angular/common/http';
 // import { FormsModule } from '@angular/forms';
 
 const appRoutes:Routes=[
-  // {path:'',component: HomeComponent},
+  {path:'',component: HomeComponent},
   {path:'about-us',component: AboutUsComponent},
   {path:'service',component: ServiceComponent}
 
@@ -27,6 +27,7 @@ const appRoutes:Routes=[
     TodosComponent,
     ServiceComponent,
     AboutUsComponent,
+    HomeComponent,
     NgcontainerComponent,
     StudentlistComponent,
     

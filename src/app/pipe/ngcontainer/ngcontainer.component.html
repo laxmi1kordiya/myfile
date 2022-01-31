@@ -1,3 +1,29 @@
-<div class="products">
-    <div> *ngFor="let proitem of products</div>
+<div class="page -area">
+    <h2>home</h2>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum dignissimos mollitia, in officia illo doloremque
+        neque recusandae veniam quibusdam id.</p>
+
+
+    <div class="products">
+        <ng-container *ngIf="statusOnline">
+
+            <div *ngFor="let proitem of products">
+                {{proitem.name}}
+            </div>
+        </ng-container>
+    </div>
 </div>
+
+<!-- ngclass -->
+<div class="box"[class.myclass]="mypro">class bulding</div>
+<div class="box"[style.margin]="mystyle">class bulding</div>
+<div class="box"[style.margin]= "isActive? mystyle :'5px'">class bulding</div>
+
+<!-- <div class="box"[ngClass]= " 'class1 class2 class3' ">class bulding</div> -->
+<div class="box"[ngClass]= " mltclasses ">class bulding</div>
+<div class="box"[ngStyle]= " mltstyle ">class bulding</div>
+
+
+
+
+

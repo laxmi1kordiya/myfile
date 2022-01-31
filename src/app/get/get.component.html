@@ -1,0 +1,48 @@
+<h2>Get Request (../userdata.service.ts)</h2>
+
+<table>
+    <tr>
+        <th>Id</th>
+        <th>Post Id</th>
+        <th>Name</th>
+        <th>Email</th>
+        <th>Body</th>
+
+    </tr >
+    <tr *ngFor= "let com of lstcomments">
+    <td>{{com.id}}</td>
+    <td>{{com.postId}}</td>
+    <td>{{com.name}}</td>
+    <td>{{com.email}}</td>
+    <td>{{com.body}}</td>
+
+
+    </tr>
+
+
+</table>
+
+<h2>Get Request (using parameters)(https://jsonplaceholder.typicode.com/posts?userId=1)</h2>
+
+<table>
+        <th>Id</th>
+        <th>UserId</th>
+        <th>Title</th>
+        <th>Body</th>
+
+        <tr *ngFor= "let com of lstposts">
+            <td>{{com.id}}</td>
+            <td>{{com.userId}}</td>
+            <td>{{com.title}}</td>
+            <td>{{com.body}}</td>
+
+</table>
+<h2>post data returned(https://jsonplaceholder.typicode.com/posts)</h2>
+<p>id :{{objposts?.id}}</p>
+<p>Userid :{{objposts?.userId}}</p>
+<p>title :{{objposts?.title}}</p>
+<p>body :{{objposts?.body}}</p>
+
+
+
+

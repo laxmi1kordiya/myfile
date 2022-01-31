@@ -1,0 +1,14 @@
+.box{
+    width: 100px;
+    height: 100px;
+    background-color: gainsboro;
+}
+/* .myclass{
+    border: 1px solid blue;
+} */
+.class1{
+    border: 1px solid blue;
+}   
+ .class2{
+     color: blue;
+}

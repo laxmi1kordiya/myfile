@@ -1,24 +1,30 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import {FormGroup,FormControl , Validators} from '@angular/forms';
 
+
 @Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  selector: 'app-reactiveform',
+  templateUrl: './reactiveform.component.html',
+  styleUrls: ['./reactiveform.component.css']
 })
-export class AppComponent {
-  title = 'todo-list';
-  
+export class ReactiveformComponent implements OnInit {
+
+  constructor() { }
   loginform= new FormGroup({
-    user:new FormControl('Ajay',[Validators.required,Validators.pattern('[a-zA-Z]+$')]),
+    user:new FormControl('',[Validators.required,Validators.pattern('[a-zA-Z]+$')]),
     password:new FormControl('12345',[Validators.required,Validators.minLength(5)]),
     age:new FormControl('23',[Validators.required,Validators.maxLength(2)]),
     phone:new FormControl('1234567890',[Validators.required,Validators.maxLength(10)]),
     email:new FormControl('Ajay@gmail.com',[Validators.required,Validators.email]),
     address:new FormControl(''),
     Gender:new FormControl(''),
-    })
-   loginUser()
+
+})
+
+  ngOnInit(): void {
+  }
+
+  loginUser()
     {
     console.warn(this.loginform.value);
     
@@ -52,5 +58,4 @@ export class AppComponent {
     }
 
 
-  
 }

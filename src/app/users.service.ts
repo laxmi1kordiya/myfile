@@ -11,7 +11,7 @@ export class UsersService {
 
   getData()
   {
-    let url:"\web devlopment\todo-list\src\app\students.Json";
-        return this.http.get('url');
+    let url="https://jsonplaceholder.typicode.com/todos/";
+        return this.http.get(url);
   }
 }

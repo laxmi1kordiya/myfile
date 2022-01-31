@@ -1,0 +1,31 @@
+
+<h4>{{value | uppercase}}</h4>
+<h4>{{value | lowercase}}</h4>
+<h4>{{value | titlecase}}</h4><br>
+<h4>*date pipe examples*</h4>
+<h4>{{date}}</h4>
+<h4>{{date | date}}</h4>
+<h4>{{date | date:'short'}}</h4>
+<h4>{{date | date:'medium'}}</h4>
+<h4>{{date | date:'fullDate' |uppercase}}</h4> <br>
+<h4>*percent pipe examples*</h4>
+<h4>{{mynumber}}</h4>
+<h4>{{mynumber | percent}}</h4>
+<h4>{{mynumber | percent:'1.4-8'}}</h4>
+<h4>*Decimal pipe examples*</h4>
+<h4>{{mynumber}}</h4>
+<h4>{{mynumber | number}}</h4>
+<h4>{{mynumber | number:'1.4-8'}}</h4>
+<h4>*currency pipe examples*</h4>
+<h4>{{mynumber}}</h4>
+<h4>{{mynumber | currency}}</h4>
+<h4>{{mynumber | currency:'INR':'code'}}</h4>
+
+
+<div>{{value | highlight:10}}</div>
+
+<ul>
+    <li *ngFor= "let name of nameArr">
+     {{name | highlight:12}}
+    </li>
+</ul>

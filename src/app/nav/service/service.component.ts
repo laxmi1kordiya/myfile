@@ -6,14 +6,14 @@ import { UserdataService } from 'src/app/userdata.service';
   styleUrls: ['./service.component.css']
 })
 export class ServiceComponent implements OnInit {
-  name='';
+  posts=null;
   
 
   constructor(private user:UserdataService) 
   {
     console.warn(this.user.getData())
     let data=this.user.getData();
-    this.name=data.name
+    // this.posts= this.posts;
     
   }
 

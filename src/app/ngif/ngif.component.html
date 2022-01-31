@@ -1,0 +1,45 @@
+<div class="container">
+    <button class="btn btn-success" (click)="onCreatBlock()">creat block</button>
+    <div *ngIf= "isValid; else elseblock">
+        block has been created and block name is my block
+    </div>
+    <ng-template #elseblock>
+        <div>no block has been created yet.</div>
+    </ng-template>
+
+</div>
+
+<!-- ngfor -->
+<div class="container">
+    <div class="row">
+       <div class="col-md-8">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>product srno.</th>
+                    <th>product Image</th>
+                    <th>product Name</th>
+                    <th>product Id</th>
+                    <th>product price</th>
+
+        
+                </tr>
+            </thead>
+            <thead>
+  
+  <tr *ngFor= "let mypro of product index as i">
+                    <td>{{i+1}}</td>
+
+                    <td><img src="{{mypro.image}}" width="70px" alt=""></td>
+                    <td>{{mypro.name}}</td>
+                    <td>{{mypro.id}}</td>
+                    <td>{{mypro.price}}</td>
+        
+                </tr>
+            </thead>
+        
+        </table>
+       </div> 
+    </div>
+</div>
+

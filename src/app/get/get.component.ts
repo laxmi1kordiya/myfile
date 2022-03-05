@@ -14,8 +14,8 @@ export class GetComponent implements OnInit {
 
    }
    lstcomments:Comments[] | undefined;
-   lstposts:posts[] | undefined;
-   objposts:posts | undefined ;
+  //  lstposts:posts[] | undefined;
+  //  objposts:posts | undefined ;
    
   ngOnInit(): void {
 
@@ -29,29 +29,29 @@ export class GetComponent implements OnInit {
     );
 
 
-    this._freeApiService.getcommentsbyparameter()
-    .subscribe
-    (
-      data=>
-      {
-      this.lstposts = data;
-      }
-    );
+  //   this._freeApiService.getcommentsbyparameter()
+  //   .subscribe
+  //   (
+  //     data=>
+  //     {
+  //     this.lstposts = data;
+  //     }
+  //   );
 
-    var opost = new posts();
+  //   var opost = new posts();
 
-    opost.body ="testbody";
-    opost.title ='testtitle';
-    opost.userId = 5;
+  //   opost.body ="testbody";
+  //   opost.title ='testtitle';
+  //   opost.userId = 5;
 
-    this._freeApiService.post(opost)
-    .subscribe
-    (
-      data=>
-      {
-      this.objposts =data;
-      }
-    );
+  //   this._freeApiService.post(opost)
+  //   .subscribe
+  //   (
+  //     data=>
+  //     {
+  //     this.objposts =data;
+  //     }
+  //   );
   }
 
-}
+  }

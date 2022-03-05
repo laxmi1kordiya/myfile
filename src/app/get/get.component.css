@@ -1,0 +1,10 @@
+table{
+    background-color: rgb(236, 234, 227);
+}
+
+table tr td{
+    padding: 10px 12px;
+}
+table tr th{
+    padding: 10px 12px;
+}

@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import studentData from '../students.json';
+import studentData  from '../students.json';
 
 interface Student{
   id: number;

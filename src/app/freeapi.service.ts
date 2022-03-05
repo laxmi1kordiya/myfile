@@ -10,16 +10,17 @@ export class FreeapiService {
   constructor(private httpclient:HttpClient) { }
 
   getcomments():Observable<any>{
-     return this.httpclient.get("https://jsonplaceholder.typicode.com/posts/1/comments")
+    //  return this.httpclient.get(" http://localhost:3000/users")
+    return this.httpclient.get("https://jsonplaceholder.typicode.com/posts?userId=1")
   }
 
-  getcommentsbyparameter():Observable<any>{
-    let params1 = new HttpParams().set('userId',1);
-    return this.httpclient.get("https://jsonplaceholder.typicode.com/posts?userId=1",{params:params1})
-  }
+  // getcommentsbyparameter():Observable<any>{
+  //   let params1 = new HttpParams().set('userId',1);
+  //   return this.httpclient.get("https://jsonplaceholder.typicode.com/posts?userId=1",{params:params1})
+  // }
 
-  post(opost:posts):Observable<any>{
-    return this.httpclient.post('https://jsonplaceholder.typicode.com/posts',opost);
+  // post(opost:posts):Observable<any>{
+  //   return this.httpclient.post('https://jsonplaceholder.typicode.com/posts',opost);
     
-  }
+  // }
 }

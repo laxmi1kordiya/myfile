@@ -22,14 +22,15 @@
 
 		<div class="form-group" formArrayName="skills">
 			<div *ngFor="let skill of skills.controls ; let i = index">
-				<div [formGroupName]="i"><label for="subject">Subject:</label>
+				<div [formGroupName]="i">
+					<label for="subject">Subject:</label>
 					<input style="margin: 10px;" type="text" class="form-control" formControlName="sub">
 					<label for="mark">Mark:</label>
 					<input style="margin: 10px;" type="text" class="form-control" formControlName="marks">
 					<button (click)="deleteskills(i)" class="btn btn-danger">remove</button>
+					<button type="button" class="btn btn-primary" (click)="addskill()">add</button>
 				</div>
 			</div>
-			<button type="button" class="btn btn-primary" (click)="addskill()">add</button>
 
 			<br>
 		</div>

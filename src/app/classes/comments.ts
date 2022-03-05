@@ -2,10 +2,12 @@
 
 export class Comments
 {
-    postId: number | undefined;
-    id: number | undefined;
-    name: string | undefined;
-    email: string | undefined;
-    body: string | undefined
+ 
+    userId: number | undefined;
+    id: string | undefined;
+    title: string | undefined;
+    body: string | undefined;
+    // mobile: string | undefined;
+    // salary:string | undefined
 
 }
